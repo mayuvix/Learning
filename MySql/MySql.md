@@ -1,0 +1,1 @@
+[MySQL常用的查询语句总结](https://zhuanlan.zhihu.com/p/355840502)

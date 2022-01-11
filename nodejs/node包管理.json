@@ -1,0 +1,3 @@
+﻿npm init 或者npm init -y  会自动生成package.json
+npm install walk 会自动下载 walk包并且 把依赖加入到package.json中，包则放在node_module中
+forEach 异步会提前结束 forEach 是拷贝

@@ -1,0 +1,1 @@
+[“echo >”和“echo >>”的区别](https://www.cnblogs.com/singeryoung/p/9554551.html)

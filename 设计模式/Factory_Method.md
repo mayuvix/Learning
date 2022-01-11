@@ -1,0 +1,1 @@
+用 abstract factory dll 导出解除依赖
