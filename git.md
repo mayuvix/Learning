@@ -1,8 +1,12 @@
 # git status
 
+步骤：（2）是新建的 ./bin也是新建的 ./bin里面有两个新建文本 
+
 - git status 不能识别 未add的文件夹下的文件假如bin/ 下其他文件 运行git status 那么
 
-![image-20201116173646598](C:\Users\may-k\AppData\Roaming\Typora\typora-user-images\image-20201116173646598.png)![image-20201116173700246](C:\Users\may-k\AppData\Roaming\Typora\typora-user-images\image-20201116173700246.png)![image-20201116175101922](C:\Users\may-k\AppData\Roaming\Typora\typora-user-images\image-20201116175101922.png)![image-20201116175150753](C:\Users\may-k\AppData\Roaming\Typora\typora-user-images\image-20201116175150753.png)
+![](https://raw.githubusercontent.com/mayuvix/Learning/master/img/202201141012619.png)
+
+
 
 /bin 为 `git add bin` 
 
@@ -186,3 +190,42 @@ git checkout .
 git checkout [filename]
 ```
 
+###  rename branch 分支重命名
+
+- in current branch 
+
+```
+git branch -m new_branch_name 
+```
+
+![image-20220119182107410](https://raw.githubusercontent.com/mayuvix/Learning/master/img/202201191821440.png)
+
+- 当不在当前分支时
+
+```
+git branch -m old_branch_name new_branch_name
+```
+
+如果是已经推送到远端，应该怎么做呢？
+
+#### 重命名远端分支（假设是在当前分支，并且远端分支与本地分支名是一致的）
+
+- 重命名本地分支
+  
+  ```bash
+  git branch -m new_branch_name
+  ```
+  
+- 删除远程分支
+  
+  ```bash
+  git push --delete origin old_branch_name
+  ```
+  
+- 上传新命名的本地分支
+  ```bash
+  git push origin new_branch_name
+
+- 关联修改后的本地分支与远程分支
+  ``` bash
+  git branch --set-upstream-to origin/new_branch_name
