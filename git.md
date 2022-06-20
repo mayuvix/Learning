@@ -190,6 +190,15 @@ git checkout .
 git checkout [filename]
 ```
 
+### 放弃stage修改
+
+```
+git restore --staged .
+git restore --staged [filename]
+```
+
+
+
 ###  rename branch 分支重命名
 
 - in current branch 
